@@ -70,12 +70,15 @@ public class PalindromeChecker extends AppCompatActivity {
          *
          */
 
+            //Check to see if the first and last characters are matching up.
+
             int indexFromEnd = word.length() - 1 - index;
         if (word.charAt(index) == word.charAt(indexFromEnd)) {
             if (index >= indexFromEnd) {
                 return true;
             }
             index++;
+            //run through Palindrome check again.
             result = checkForPalindrome(word, index, result);
         }
         else {
